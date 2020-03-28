@@ -30,7 +30,7 @@
 
   .flip-clock-wrapper.clearfix:before,
   .flip-clock-wrapper.clearfix:after {
-    content: ' ';
+    content: " ";
     display: table;
   }
 
@@ -44,7 +44,7 @@
 
   /* Main */
   .flip-clock-wrapper {
-    font: normal 11px 'Helvetica Neue', Helvetica, sans-serif;
+    font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
     // font-family: 'Webdings';
     -webkit-user-select: none;
   }
@@ -63,12 +63,16 @@
     text-align: center;
     position: relative;
     width: 100%;
-    margin: 1em;
+    margin: 1em 0;
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .flip-clock-wrapper:before,
   .flip-clock-wrapper:after {
-    content: ' '; /* 1 */
+    content: " "; /* 1 */
     display: table; /* 2 */
   }
   .flip-clock-wrapper:after {
@@ -143,7 +147,7 @@
   }
 
   .flip-clock-wrapper ul li a div.up:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 44px;
     left: 0;
@@ -415,6 +419,7 @@
       color-stop(100%, black)
     );
     background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), black);
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
     background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
@@ -433,6 +438,7 @@
       color-stop(100%, black)
     );
     background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), black);
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
     background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
@@ -452,6 +458,7 @@
       color-stop(100%, rgba(0, 0, 0, 0.1))
     );
     background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.1));
     background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
     background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
     background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
@@ -470,12 +477,48 @@
       color-stop(100%, rgba(0, 0, 0, 0.1))
     );
     background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.1));
     background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
     background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
     background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
     -webkit-animation: hide 0.5s 0.3s linear both;
     -moz-animation: hide 0.5s 0.3s linear both;
     animation: hide 0.5s 0.2s linear both;
+  }
+
+  @media (max-width: 767px) {
+    .flip-clock-wrapper {
+      max-width: 310px;
+      margin: 1em auto;
+
+      & ul {
+        margin-bottom: 20px;
+      }
+      & .flip-clock-divider.days {
+        width: 10px;
+      }
+      & .flip-clock-divider.minutes {
+        width: 10px;
+
+        & > .flip-clock-dot {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 383px) {
+    .flip-clock-wrapper {
+      max-width: 150px;
+
+      & .flip-clock-divider {
+        width: 10px;
+
+        & > .flip-clock-dot {
+          visibility: hidden;
+        }
+      }
+    }
   }
 
   @-webkit-keyframes show {
