@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { FlipclockComponent } from './countdown/flipclock/flipclock.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountdownComponent,
-    FlipclockComponent
+    FlipclockComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
