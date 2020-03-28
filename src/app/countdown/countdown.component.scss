@@ -1,0 +1,15 @@
+$base-color: #7579ff88;
+$secondary-color: #b224ef88;
+
+#countdown-page {
+  background-image: url("/assets/background.jpg");
+}
+
+#countdown-content {
+  min-height: 100vh;
+  background: $base-color;
+  background: -webkit-linear-gradient(to bottom, $base-color, $secondary-color);
+  background: -o-linear-gradient(to bottom, $base-color, $secondary-color);
+  background: -moz-linear-gradient(to bottom, $base-color, $secondary-color);
+  background: linear-gradient(to bottom, $base-color, $secondary-color);
+}
