@@ -5,7 +5,7 @@ import { CountdownComponent } from "./countdown/countdown.component";
 import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/countdown", pathMatch: "full" },
+  { path: "", component: CountdownComponent },
   { path: "home", component: HomeComponent },
   { path: "countdown", component: CountdownComponent }
 ];
