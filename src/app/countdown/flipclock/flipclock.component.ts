@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import * as $ from "jquery";
 import * as FlipClock from "./flipclock";
 
-const RELEASE_DATE = new Date("2020-04-01T10:00:00-07:00");
+const RELEASE_DATE = new Date("2020-04-01T12:00:00-07:00");
 
 @Component({
   selector: "app-flipclock",
