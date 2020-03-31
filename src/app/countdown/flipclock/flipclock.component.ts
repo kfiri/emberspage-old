@@ -20,27 +20,19 @@ export class FlipclockComponent implements OnInit {
       const timeNow = new Date();
       const MillisecondsCounter = RELEASE_DATE.getTime() - timeNow.getTime();
 
-      const clock = $(this)["FlipClock"](MillisecondsCounter / 1000, {
+      $(this)["FlipClock"](MillisecondsCounter / 1000, {
         clockFace: "DailyCounter",
-        // autoStart: false,
-        countdown: true,
-        // language: 'hebrew',
-        callbacks: {
-          start() {
-            console.log(this);
-          },
-          interval() {
-            // The amount of seconds left.
-            const timeRemaining = this.factory.time.time;
-            // console.log(timeRemaining);
-          }
-        }
+        countdown: true
+        // callbacks: {
+        //   start() {
+        //     console.log(this);
+        //   },
+        //   interval() {
+        //     // The amount of seconds left.
+        //     const timeRemaining = this.factory.time.time;
+        //   }
+        // }
       });
-      // clock.stop();
-      // setTimeout(() => {
-      //   clock.start();
-      // }, 5000);
-      console.log($(this)["FlipClock"]);
     });
   }
 }
