@@ -1,14 +1,24 @@
 <div id="countdown-page">
   <div id="countdown-content">
     <div>
-      <h1
-        class="text-center"
-        style="font-family: 'Product Sans', 'Roboto', sans-serif;"
-      >
+      <h1 style="font-family: 'Product Sans', 'Roboto', sans-serif;">
         COMING SOON
       </h1>
 
       <app-flipclock></app-flipclock>
+    </div>
+    <div>
+      <iframe
+        [width]="embeddedVideoWidth"
+        [height]="embeddedVideoHeight"
+        src="https://www.youtube.com/embed/5T9IsRyfIF0?controls=0&autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="background-acknowledgement">
+      background made by SVGBackgrounds.com ♥
     </div>
   </div>
 </div>

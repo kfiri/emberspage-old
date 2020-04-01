@@ -18,8 +18,16 @@ $secondary-color: #b224ef88;
   background: linear-gradient(to bottom, $base-color, $secondary-color);
 
   display: flex;
+  flex-wrap: wrap;
 
   & > div {
+    flex-basis: 100%;
     margin: auto;
+    text-align: center;
+
+    &#background-acknowledgement {
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
   }
 }
